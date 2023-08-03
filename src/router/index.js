@@ -26,9 +26,21 @@ const routes = [
         meta: { layout: 'dashboard' },
     },
     {
+        path: '/news',
+        name: 'News',
+        component: () => import('../views/News.vue'),
+        meta: { layout: 'dashboard' },
+    },
+    {
         path: '/notfound',
         name: 'Not-Found',
         component: () => import('../components/NotFound.vue'),
+    },
+    {
+        path: '/registration',
+        name: 'Registration',
+        component: () => import('../components/Registration.vue'),
+        meta: { layout: 'dashboard' },
     },
     {
         path: '/:pathMach(.*)*',
