@@ -24,7 +24,7 @@ const isDarkMode = useDark()
       <header class="mb-auto flex justify-center z-50 w-full py-4">
         <nav class="px-4 pt-8 sm:px-6 lg:px-8" aria-label="Global">
           <a class="flex-none text-xl font-semibold sm:text-3xl dark:text-white" href="#" aria-label="Brand">
-            <img src="../assets/images/express-logo.png" class="h-16" alt="Express Logo">
+            <img src="../../public/images/express-logo.png" class="h-16" alt="Express Logo">
           </a>
         </nav>
       </header>

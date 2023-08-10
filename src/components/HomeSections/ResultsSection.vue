@@ -1,13 +1,5 @@
 <script setup>
-import {ref} from "vue";
 
-const courses = ref([
-  {name:"Ingliz tili - grammatika", cost: 300000, },
-  {name:"Ingliz tili - Pre-ielts", cost: 350000, },
-  {name:"Ingliz tili - ielts", cost: 400000, },
-  {name:"Ingliz tili - multi-level", cost: 400000, },
-  {name:"Ingliz tili - kid's ", cost: 400000, }
-])
 </script>
 
 <template>
@@ -16,10 +8,13 @@ const courses = ref([
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4">
           <div class="mx-auto mb-10 max-w-3xl  text-center lg:mb-20">
+           <span class="text-white mb-2 py max-w-[90px] mx-auto bg-green-600 rounded-full block text-base font-medium">
+           Narxlar
+          </span>
             <h2 class="text-indigo-800 my-4 text-2xl font-bold sm:text-4xl md:text-3xl dark:text-white">
-              O'quv kurslari bilan tanishing
+              Our Pricing Plan
             </h2>
-            <p class="text-body-color text-lg dark:text-slate-300">
+            <p class="text-body-color text-base dark:text-slate-300">
               There are many variations of passages of Lorem Ipsum available but
               the majority have suffered alteration in some form.
             </p>
@@ -27,14 +22,14 @@ const courses = ref([
         </div>
       </div>
       <div class="mx-4 flex flex-wrap justify-center">
-        <div v-for="course in courses" class="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
           <div
               class="shadow-pricing relative z-10 mb-10 overflow-hidden rounded-xl border border-indigo-800 dark:border-slate-600 bg-white px-8 sm:p-12 lg:py-10 lg:px-6 xl:p-12 dark:bg-slate-900">
-          <span class="text-green-700 dark:text-white mt-6 mb-4 block text-lg font-bold uppercase">
-            {{ course.name }}
+          <span class="text-green-700 dark:text-white mt-6 mb-4 block text-xl font-bold uppercase">
+            Grammatika
           </span>
             <h2 class="text-dark mb-5 text-3xl font-bold text-indigo-800 dark:text-white">
-              {{ course.cost }} <span>so'm</span>
+              300 000 so'm
               <span class="text-body-color text-base font-medium"> / oy </span>
             </h2>
             <p class="dark:text-slate-300 mb-8 border-b border-slate-300 pb-8 text-base">

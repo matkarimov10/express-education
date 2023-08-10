@@ -23,15 +23,14 @@ toast.success('Message sent successfully !')
 }
 
 </script>
-
 <template>
   <section class="py-10 text-slate-700 dark:text-slate-400 dark:bg-slate-800 body-font relative">
     <div class="text-center">
       <h1 class="text-3xl font-bold text-slate-800 sm:text-4xl dark:text-white">
         Contact us
       </h1>
-      <p class="mt-1 text-slate-600 dark:text-slate-300">
-        We'd love to talk about how we can help you.
+      <p class="mt-1 text-slate-600 text-lg dark:text-slate-300">
+        Contact us about how we can help you.
       </p>
     </div>
     <div class="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -54,8 +53,9 @@ toast.success('Message sent successfully !')
       </div>
 
 
-      <div class="flex mt-10 md:mt-0 px-12 dark:bg-slate-900 mx-auto flex-col border rounded-xl p-4 sm:p-6 lg:p-8 dark:border-slate-600">
-        <h2 class="mb-8 text-xl font-semibold text-slate-800 dark:text-slate-200">
+      <div
+          class="flex mt-10 md:mt-0 px-12 dark:bg-slate-900 mx-auto flex-col border-2 border-indigo-800 rounded-xl p-4 sm:p-6 lg:p-8 dark:border-slate-600">
+        <h2 class="mb-8 text-xl text-center font-semibold text-indigo-800 dark:text-slate-300">
           Fill in the form
         </h2>
         <form class="form" ref="form" @submit.prevent="sendEmail">
@@ -63,39 +63,39 @@ toast.success('Message sent successfully !')
             <!-- Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="hs-firstname-contacts-1" class="sr-only">First Name</label>
-                <input type="text" name="hs-firstname-contacts-1" id="hs-firstname-contacts-1"
-                       class="py-3 px-4 block w-full border-slate-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400"
+                <label for="firstname-contacts" class="sr-only">First Name</label>
+                <input type="text" name="firstname-contacts" id="firstname-contacts"
+                       class="py-3 px-4 block w-full border-indigo-800 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-600 dark:placeholder-slate-400 dark:text-slate-400"
                        placeholder="First Name" required>
               </div>
 
               <div>
-                <label for="hs-lastname-contacts-1" class="sr-only">Last Name</label>
-                <input type="text" name="hs-lastname-contacts-1" id="hs-lastname-contacts-1"
-                       class="py-3 px-4 block w-full border-slate-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400"
+                <label for="lastname-contacts" class="sr-only">Last Name</label>
+                <input type="text" name="lastname-contacts" id="lastname-contacts"
+                       class="py-3 px-4 block w-full border-indigo-800 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-600 dark:placeholder-slate-400 dark:text-slate-400"
                        placeholder="Last Name" required>
               </div>
             </div>
             <!-- End Grid -->
 
             <div>
-              <label for="hs-email-contacts-1" class="sr-only">Email</label>
-              <input type="email" name="hs-email-contacts-1" id="hs-email-contacts-1" autocomplete="email"
-                     class="py-3 px-4 block w-full border-slate-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400"
+              <label for="email-contacts" class="sr-only">Email</label>
+              <input type="email" name="hs-email-contacts-1" id="email-contacts" autocomplete="email"
+                     class="py-3 px-4 block w-full border-indigo-800 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-600 dark:placeholder-slate-400 dark:text-slate-400"
                      placeholder="Email" required>
             </div>
 
             <div>
-              <label for="hs-phone-number-1" class="sr-only">Phone Number</label>
-              <input type="text" name="hs-phone-number-1" id="hs-phone-number-1"
-                     class="py-3 px-4 block w-full border-slate-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400"
+              <label for="phone-number" class="sr-only">Phone Number</label>
+              <input type="text" name="phone-number" id="phone-number"
+                     class="py-3 px-4 block w-full border-indigo-800 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-600 dark:placeholder-slate-400 dark:text-slate-400"
                      placeholder="Phone Number" required>
             </div>
 
             <div>
-              <label for="hs-about-contacts-1" class="sr-only">Details</label>
-              <textarea id="hs-about-contacts-1" name="hs-about-contacts-1" rows="4"
-                        class="py-3 px-4 block w-full border-slate-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400"
+              <label for="about-contacts" class="sr-only">Details</label>
+              <textarea id="about-contacts" name="about-contacts" rows="4"
+                        class="py-3 px-4 block w-full border-indigo-800 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-600 dark:placeholder-slate-400 dark:text-slate-400"
                         placeholder="Details" required></textarea>
             </div>
           </div>
@@ -103,13 +103,13 @@ toast.success('Message sent successfully !')
 
           <div class="mt-4 grid">
             <button type="submit"
-                    class="inline-flex justify-center items-center gap-x-3 text-center bg-indigo-700 hover:bg-indigo-800 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-slate-800">
-              Send inquiry
+                    class="inline-flex justify-center items-center gap-x-3 text-center bg-indigo-600 hover:bg-indigo-800 border border-transparent text-sm lg:text-base text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-slate-800">
+              Send
             </button>
           </div>
 
           <div class="mt-3 text-center">
-            <p class="text-sm text-slate-600 dark:text-slate-300">
+            <p class="text-sm text-indigo-800 dark:text-slate-300">
               We'll get back to you in 1-2 business days.
             </p>
           </div>

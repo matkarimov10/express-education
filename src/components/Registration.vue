@@ -14,7 +14,7 @@
           <div class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 first:border-transparent border-slate-200 dark:border-slate-700">
             <div class="sm:col-span-12">
               <div class="my-1 flex items-center justify-center  w-full md:w-auto">
-                  <img src="../assets/images/express-logo.png" class="h-14 flex items-center" alt="Express Education Logo"/>
+                  <img src="../../public/images/express-logo.png" class="h-14 flex items-center" alt="Express Education Logo"/>
               </div>
               <h2 class="text-2xl mt-4 text-center py-2 font-semibold text-slate-800 dark:text-slate-200">
                 Registration for the course

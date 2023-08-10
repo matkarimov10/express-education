@@ -14,9 +14,9 @@ const routes = [
         meta: { layout: 'dashboard' },
     },
     {
-        path: '/about-us',
-        name: 'About Us',
-        component: () => import('../views/AboutUs.vue'),
+        path: '/our-team',
+        name: 'Our Team',
+        component: () => import('../views/OurTeam.vue'),
         meta: { layout: 'dashboard' },
     },
     {

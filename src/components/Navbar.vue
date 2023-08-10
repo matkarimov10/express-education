@@ -18,6 +18,13 @@ const toggleSvgPaths = () => {
   isOpenMenu.value = !isOpenMenu.value;
 };
 
+const navlinks = ref([
+  {name: 'Home', path:'/'},
+  {name: 'Courses', path:'/courses'},
+  {name: 'News', path:'/news'},
+  {name: 'Our Team', path:'/our-team'},
+  {name: 'Contact', path:'/contact'},
+])
 </script>
 
 <template>
@@ -26,7 +33,7 @@ const toggleSvgPaths = () => {
       <!--      Logo-->
       <div class="my-2 flex items-center justify-center md:justify-start w-full md:w-auto">
         <router-link to="/">
-          <img src="../assets/images/express-logo.png" class="h-10 flex items-center" alt="Express Education Logo"/>
+          <img src="../../public/images/express-logo.png" class="h-10 flex items-center" alt="Express Education Logo"/>
         </router-link>
       </div>
       <div class="flex items-center md:order-2">
@@ -99,42 +106,11 @@ const toggleSvgPaths = () => {
       </div>
       <!--      Nav Links-->
       <div class="px-0.5 items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
-        <ul
-            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-slate-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:border-slate-600">
-          <li>
-            <router-link to="/"
-                         active-class="text-blue-700 bg-transparent dark:text-blue-600"
-                         class="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-slate-700"
-
-            >Home
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/courses"
-                         active-class="text-blue-700 bg-transparent dark:text-blue-600"
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-slate-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:border-slate-600">
+          <li v-for="navlink in navlinks">
+            <router-link :to="navlink.path"
                          class="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-slate-700">
-              Courses
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/news"
-                         active-class="text-blue-700 bg-transparent dark:text-blue-600"
-                         class="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-slate-700">
-              News
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/about-us"
-                         active-class="text-blue-700 bg-transparent dark:text-blue-600"
-                         class="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-slate-700">
-              About Us
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/contact"
-                         active-class="text-blue-700 bg-transparent dark:text-blue-600"
-                         class="block py-2 pl-3 pr-4 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-slate-700">
-              Contact
+              {{ navlink.name }}
             </router-link>
           </li>
         </ul>
