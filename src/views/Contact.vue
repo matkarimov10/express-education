@@ -54,7 +54,7 @@ toast.success('Message sent successfully !')
 
 
       <div
-          class="flex mt-10 md:mt-0 px-12 dark:bg-slate-900 mx-auto flex-col border-2 border-indigo-800 rounded-xl p-4 sm:p-6 lg:p-8 dark:border-slate-600">
+          class="flex mt-10 md:mt-0 px-12 dark:bg-slate-900 mx-auto flex-col border border-indigo-800 rounded-xl p-4 sm:p-6 lg:p-8 dark:border-slate-600">
         <h2 class="mb-8 text-xl text-center font-semibold text-indigo-800 dark:text-slate-300">
           Fill in the form
         </h2>

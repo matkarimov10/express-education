@@ -1,5 +1,4 @@
 <script setup>
-import NextIcon from "../../assets/icons/NextIcon.vue";
 import InstagramIcon from "../../assets/icons/InstagramIcon.vue";
 import TelegramIcon from "../../assets/icons/TelegramIcon.vue";
 import YoutubeIcon from "../../assets/icons/YoutubeIcon.vue";
