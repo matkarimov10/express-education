@@ -15,11 +15,13 @@
     "pinia": "^2.1.4",
     "preline": "^1.9.0",
     "vue": "^3.3.4",
-    "vue-i18n": "^9.2.2",
+    "vue-i18n": "^9.3.0-beta.25",
     "vue-router": "^4.2.4",
-    "vue-toastification": "^2.0.0-rc.5"
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue3-marquee": "^4.0.0"
   },
   "devDependencies": {
+    "@intlify/vue-i18n-loader": "^5.0.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.26",

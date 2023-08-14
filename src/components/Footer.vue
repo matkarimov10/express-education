@@ -5,46 +5,46 @@ import YoutubeIcon from "../assets/icons/YoutubeIcon.vue";
 </script>
 
 <template>
-  <footer class="bg-white border-t-[1px] dark:border-slate-600 pt-10 lg:pt-10 md:p-6 lg:p-4 dark:bg-slate-900">
-    <div class="mx-auto max-w-screen-xl text-center">
-      <div class="my-1 flex items-center justify-center  w-full md:w-auto">
-          <img src="../../public/images/express-logo.png" class="h-14 flex items-center" alt="Express Education Logo"/>
+  <footer class="bg-white border-t dark:border-slate-600 pt-10 lg:pt-10 md:p-6 lg:p-4 dark:bg-slate-900  bg-gradient-to-b from-blue-50 via-blue-100 dark:bg-gradient-to-b dark:from-violet-500/[.15] dark:via-transparent">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <div class="flex items-center justify-center w-full my-1 md:w-auto">
+          <img src="/images/express-logo.png" class="flex items-center h-14" alt="Express Education Logo"/>
       </div>
-      <p class="my-6 text-slate-700 text-lg mx-auto px-6 max-w-4xl dark:text-slate-300">Discover a World of Learning and Innovation at Express Education</p>
-      <ul class="flex flex-wrap justify-center items-center text-slate-900 dark:text-white">
+      <p class="max-w-4xl px-6 mx-auto my-6 text-lg text-slate-700 dark:text-slate-300">Discover a World of Learning and Innovation at Express Education</p>
+      <ul class="flex flex-wrap items-center justify-center text-slate-900 dark:text-white">
         <li>
-          <router-link to="/" class="mr-4 hover:underline text-lg md:mr-6 ">Home</router-link>
+          <router-link to="/" class="mr-4 text-lg hover:underline md:mr-6 ">Home</router-link>
         </li>
         <li>
-          <router-link to="/courses" class="mr-4 hover:underline text-lg md:mr-6">Courses</router-link>
+          <router-link to="/courses" class="mr-4 text-lg hover:underline md:mr-6">Courses</router-link>
         </li>
         <li>
-          <router-link to="/news" class="mr-4 hover:underline text-lg md:mr-6">News</router-link>
+          <router-link to="/news" class="mr-4 text-lg hover:underline md:mr-6">News</router-link>
         </li>
         <li>
-          <router-link to="/about-us" class="mr-4 hover:underline text-lg md:mr-6 ">About Us</router-link>
+          <router-link to="/about-us" class="mr-4 text-lg hover:underline md:mr-6 ">About Us</router-link>
         </li>
         <li>
-          <router-link to="/contact" class="mr-4 hover:underline text-lg md:mr-6">Contact</router-link>
+          <router-link to="/contact" class="mr-4 text-lg hover:underline md:mr-6">Contact</router-link>
         </li>
       </ul>
 
       <!--      Social accaunts-->
 
-      <ul class="flex flex-wrap justify-center items-center text-slate-900 dark:text-white">
+      <ul class="flex flex-wrap items-center justify-center text-slate-900 dark:text-white">
         <li class="mx-2">
           <a href="https://t.me/expresseducation_uz" class="px-3">
-            <TelegramIcon class="h-8 w-8 text-blue-500 hover:text-blue-600"/>
+            <TelegramIcon class="w-8 h-8 text-blue-500 hover:text-blue-600"/>
           </a>
         </li>
         <li class="mx-2">
           <a href="https://www.instagram.com/expresseducation_uz/" class="px-3">
-            <InstagramIcon class="h-8 w-8 text-rose-500 hover:text-rose-600"/>
+            <InstagramIcon class="w-8 h-8 text-rose-500 hover:text-rose-600"/>
           </a>
         </li>
         <li class="mx-2">
           <a href="#" class="px-3">
-            <YoutubeIcon class="h-12 w-12 text-red-700 hover:text-red-600"/>
+            <YoutubeIcon class="w-12 h-12 text-red-700 hover:text-red-600"/>
           </a>
         </li>
       </ul>

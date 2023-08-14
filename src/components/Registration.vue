@@ -6,17 +6,17 @@
   <main class="dark:bg-slate-800">
 
     <!-- Card Section -->
-    <div class="max-w-6xl  px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div class="max-w-6xl px-4 py-10 mx-auto sm:px-6 lg:px-8 lg:py-14">
       <!-- Card -->
-      <div class="bg-white shadow-xl border  dark:border-slate-600 rounded-xl p-4 sm:p-7 dark:bg-slate-900">
+      <div class="p-4 bg-white border shadow-xl dark:border-slate-600 rounded-xl sm:p-7 dark:bg-slate-900">
         <form>
           <!-- Section -->
-          <div class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 first:border-transparent border-slate-200 dark:border-slate-700">
+          <div class="grid gap-2 py-8 sm:grid-cols-12 sm:gap-4 first:pt-0 last:pb-0 first:border-transparent border-slate-200 dark:border-slate-700">
             <div class="sm:col-span-12">
-              <div class="my-1 flex items-center justify-center  w-full md:w-auto">
-                  <img src="../../public/images/express-logo.png" class="h-14 flex items-center" alt="Express Education Logo"/>
+              <div class="flex items-center justify-center w-full my-1 md:w-auto">
+                  <img src="../../public/images/express-logo.png" class="flex items-center h-14" alt="Express Education Logo"/>
               </div>
-              <h2 class="text-2xl mt-4 text-center py-2 font-semibold text-slate-800 dark:text-slate-200">
+              <h2 class="py-2 mt-4 text-2xl font-semibold text-center text-slate-800 dark:text-slate-200">
                 Registration for the course
               </h2>
             </div>
@@ -30,9 +30,9 @@
             <div class="sm:col-span-9">
               <div class="sm:flex">
                 <input id="af-submit-application-full-name" type="text"
-                       class="py-2 px-3 pr-11 block w-full border-slate-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-lg relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
+                       class="relative block w-full px-3 py-2 -mt-px -ml-px text-lg shadow-sm pr-11 border-slate-200 first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
                 <input type="text"
-                       class="py-2 px-3 pr-11 block w-full border-slate-200 shadow-sm -mt-px -ml-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg text-lg relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
+                       class="relative block w-full px-3 py-2 -mt-px -ml-px text-lg shadow-sm pr-11 border-slate-200 first:rounded-t-lg last:rounded-b-lg sm:first:rounded-l-lg sm:mt-0 sm:first:ml-0 sm:first:rounded-tr-none sm:last:rounded-bl-none sm:last:rounded-r-lg focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
               </div>
             </div>
             <!-- End Col -->
@@ -46,7 +46,7 @@
             <!-- End Col -->
             <div class="sm:col-span-9">
               <input id="af-submit-application-phone" type="text"
-                     class="py-2 px-3 pr-11 block w-full border-slate-200 shadow-sm rounded-lg text-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
+                     class="block w-full px-3 py-2 text-lg rounded-lg shadow-sm pr-11 border-slate-200 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
             </div>
             <!-- End Col -->
 <!--            Select Courses-->
@@ -86,7 +86,7 @@
             <!-- End Col -->
             <div class="sm:col-span-9">
               <input id="af-submit-application-email" type="email"
-                     class="py-2 px-3 pr-11 block w-full border-slate-200 shadow-sm text-lg rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
+                     class="block w-full px-3 py-2 text-lg rounded-lg shadow-sm pr-11 border-slate-200 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
             </div>
 
             <div class="sm:col-span-3">
@@ -98,13 +98,13 @@
 
             <div class="sm:col-span-9">
               <textarea id="af-account-bio"
-                        class="py-2 px-3 block w-full border-gray-200 rounded-lg text-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-600 dark:text-slate-300" rows="6" placeholder="Type your message..."></textarea>
+                        class="block w-full px-3 py-2 text-lg border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-slate-600 dark:text-slate-300" rows="6" placeholder="Type your message..."></textarea>
             </div>
           </div>
           <!-- End Section -->
           <!-- Section -->
           <div
-              class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-slate-200 dark:border-slate-700">
+              class="grid gap-2 py-8 border-t sm:grid-cols-12 sm:gap-4 first:pt-0 last:pb-0 first:border-transparent border-slate-200 dark:border-slate-700">
             <div class="sm:col-span-12">
               <h2 class="text-lg font-semibold text-slate-800 dark:text-white">
                 Links
@@ -119,13 +119,13 @@
             <!-- End Col -->
             <div class="sm:col-span-9">
               <input id="af-submit-application-linkedin-url" type="text"
-                     class="py-2 px-3 pr-11 block w-full border-slate-200 shadow-sm text-lg rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
+                     class="block w-full px-3 py-2 text-lg rounded-lg shadow-sm pr-11 border-slate-200 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-800 dark:border-slate-600 dark:text-slate-300">
             </div>
             <!-- End Col -->
           </div>
           <!-- End Section -->
           <button type="button"
-                  class="py-3 px-4 w-full inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-indigo-700 text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-lg dark:focus:ring-offset-slate-800">
+                  class="inline-flex items-center justify-center w-full gap-2 px-4 py-3 text-lg font-semibold text-white transition-all bg-indigo-700 border border-transparent rounded-md hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-800">
             Submit application
           </button>
         </form>

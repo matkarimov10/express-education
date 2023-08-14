@@ -1,3 +1,13 @@
 {
-  "learningCenter": "Learning center"
+  "title": "Express Education LC",
+  "learningCenter": "Learning center",
+  "homePage": "Home",
+  "heroTitle": "Express Education - fast quality and successful",
+  "navLinks": {
+    "home": "Home",
+    "courses": "Courses",
+    "news": "New",
+    "ourTeam": "Our Team",
+    "contact": "Contact"
+  }
 }

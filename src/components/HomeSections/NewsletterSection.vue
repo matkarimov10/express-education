@@ -3,18 +3,18 @@ import NextIcon from "../../assets/icons/NextIcon.vue";
 </script>
 
 <template>
-  <div class="w-full mx-auto relative pt-10 px-10  pb-12 dark:bg-slate-800 dark:bg-gradient-to-b dark:from-violet-500/[.15] dark:via-transparent">
-    <div class="md:flex justify-between bg-gradient-to-r from-blue-500 to-blue-500 via-indigo-700 p-10 lg:p-16 rounded-3xl">
+  <div class="w-full mx-auto relative pt-10 px-10  pb-12 dark:bg-slate-800">
+    <div class="justify-between p-10 md:flex bg-gradient-to-r from-blue-500 to-blue-500 via-indigo-700 lg:p-16 rounded-3xl">
       <div class="flex flex-col">
         <p class="text-2xl text-white">
           Malakali ustozlardan ta'lim oling
         </p>
-        <h3 class="text-white text-4xl font-semibold flex items-center ">Kurslarga yoziling <NextIcon class="h-10 w-10 mt-1"/></h3>
+        <h3 class="flex items-center text-4xl font-semibold text-white ">Kurslarga yoziling <NextIcon class="w-10 h-10 mt-1"/></h3>
       </div>
 
-      <div class="flex justify-center items-center md:mt-0 mt-4">
+      <div class="flex items-center justify-center mt-4 md:mt-0">
         <router-link to="/registration"
-                     class="inline-flex justify-center text-lg items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800">
+                     class="inline-flex items-center transition duration-300 justify-center px-6 py-3 text-lg font-medium text-center text-white border border-transparent rounded-full shadow-lg gap-x-3 bg-gradient-to-tl from-blue-600 to-violet-600 shadow-transparent hover:shadow-blue-700/50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800">
           Register to course
         </router-link>
       </div>

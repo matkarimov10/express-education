@@ -1,3 +1,13 @@
 {
-  "learningCenter": "O'quv markaz"
+  "title": "Express Education o'quv markazi",
+  "learningCenter": "O'quv markaz",
+  "homePage": "Uy sahifa",
+  "heroTitle": "Express Education - tezkor ta va tez muvaffaqiyatga erishing",
+  "navLinks": {
+    "home": "Uy sahifa",
+    "courses": "Kurslar",
+    "news": "Yangiliklar",
+    "ourTeam": "Bizning jamoa",
+    "contact": "Bog'lanish"
+  }
 }
