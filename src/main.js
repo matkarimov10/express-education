@@ -2,7 +2,6 @@ import { createApp } from 'vue';
 import {createPinia} from "pinia";
 import './style.css';
 import 'flowbite';
-import 'preline'
 import router from './router';
 import App from './App.vue';
 import DashboardLayout from './layouts/DashboardLayout.vue';

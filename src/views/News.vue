@@ -37,7 +37,7 @@ const news_card = ref([
 
 <template>
   <div
-      class="py-10 mx-auto bg-white sm:px-6 lg:px-8 lg:py-14 dark:bg-slate-800 dark:bg-gradient-to-b dark:from-violet-500/[.15] dark:via-transparent">
+      class="py-10 md:mx-auto px-4 bg-white sm:px-6 lg:px-8 lg:py-14 dark:bg-slate-800 dark:bg-gradient-to-b dark:from-violet-500/[.15] dark:via-transparent">
     <div class="max-w-2xl mx-auto mb-10 text-center lg:mb-14">
       <h2 class="text-2xl font-bold text-indigo-800 md:text-4xl md:leading-tight dark:text-white">News</h2>
       <p class="mt-1 text-lg text-slate-600 dark:text-slate-300">Express Education o'quv markazi faoliyati, talabalar natijalari va o'quv jarayonlari
@@ -53,10 +53,10 @@ const news_card = ref([
              :src="news.img_src"
              :alt="news.img_alt">
         <div class="my-6">
-          <h3 class="text-xl font-semibold text-slate-800 dark:text-white dark:group-hover:text-white">
+          <h3 class="text-xl font-semibold no-underline text-slate-800 dark:text-white dark:group-hover:text-white">
             {{ news.title }}
           </h3>
-          <p class="mt-5 text-gray-600 dark:text-slate-300">
+          <p class="mt-5 text-slate-600 dark:text-slate-300">
             {{ news.description }}
           </p>
         </div>
@@ -97,5 +97,7 @@ const news_card = ref([
 </template>
 
 <style scoped>
-
+.router-link-exact-active{
+  text-decoration: none;
+}
 </style>

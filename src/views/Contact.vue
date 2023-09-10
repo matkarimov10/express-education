@@ -1,6 +1,6 @@
 <script setup>
 import {useToast} from "vue-toastification";
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import {onMounted, ref} from 'vue';
 import {initFlowbite} from "flowbite";
 
@@ -11,17 +11,17 @@ const form = ref(null)
 const toast = useToast();
 const inputFieldReset = ref(null)
 
-const sendEmail = () => {
-  emailjs.sendForm('service_44jimgz', 'template_c9c6e9b', form.value, 'aM67ZKtgsmSX3-7VI')
-      .then(() => {
-        toast.success('Message sent successfully !')
-        inputFieldReset.value = " "
-      }).catch((error) => {
-    // Error sending email
-    console.error('Error sending email', error);
-    toast.error('Error sending email. Please try again later.');
-  });
-}
+// const sendEmail = () => {
+//   emailjs.sendForm('service_44jimgz', 'template_c9c6e9b', form.value, 'aM67ZKtgsmSX3-7VI')
+//       .then(() => {
+//         toast.success('Message sent successfully !')
+//         inputFieldReset.value = " "
+//       }).catch((error) => {
+//     // Error sending email
+//     console.error('Error sending email', error);
+//     toast.error('Error sending email. Please try again later.');
+//   });
+// }
 </script>
 <template>
   <section

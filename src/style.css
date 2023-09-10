@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/*.router-link-exact-active{*/
-/*    color: #45c5c5;*/
-/*}*/
+.router-link-exact-active{
+    text-decoration: underline rgb(81 69 205 / var(--tw-bg-opacity));
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}

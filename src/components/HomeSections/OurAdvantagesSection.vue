@@ -19,7 +19,7 @@ const advantages = ref([
 <template>
   <section class="pt-20 pb-12 lg:pt-12 lg:pb-14 bg-white dark:bg-slate-800 dark:bg-gradient-to-b dark:from-violet-500/[.15] dark:via-transparent">
     <div class="container mx-auto">
-      <div class="flex flex-wrap -mx-4">
+      <div class="flex flex-wrap">
         <div class="w-full px-4">
           <div class="max-w-3xl mx-auto mb-10 text-center lg:mb-20">
           <span class="text-white mb-2 py max-w-[140px] mx-auto bg-green-600 rounded-full block text-base font-medium">

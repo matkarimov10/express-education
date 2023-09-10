@@ -75,36 +75,36 @@ const results = ref([
           </div>
         </div>
       </div>
-      <div class="flex flex-wrap justify-center mx-10">
+      <div class="flex flex-wrap justify-center px-10">
         <Vue3Marquee :space="50" :duration="30" :direction="'normal'">
           <div class="flex items-center ml-6 space-x-4">
             <div
                 v-for="(result, index) in results" :key="index"
-                class="relative grid h-[40rem] w-[600px] max-w-[30rem] flex-col items-end justify-center rounded-xl text-center">
+                class="relative grid h-80 w-64 md:h-[40rem] md:w-[600px] max-w-[30rem] flex-col items-end justify-center rounded-xl text-center">
               <div
-                  class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-xl bg-transparent bg-cover bg-center">
+                  class="absolute h-full w-full overflow-hidden rounded-xl bg-transparent bg-cover bg-center">
                 <img class="h-full w-full"
                     :src="result.img_src"
                     :alt="result.img_alt">
                 <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-blue-500 via-black/50"></div>
               </div>
-              <div class="relative p-6 py-14 px-6 md:px-12">
-                <h2 class="mb-6 block font-sans text-4xl font-medium leading-[1.5] tracking-normal text-white">
+              <div class="relative py-4 md:py-14 px-6 md:px-12">
+                <h2 class="mb-2 block font-sans text-xl md:text-3xl font-medium leading-[1.5] tracking-normal text-white">
                   {{ result.name }}
                 </h2>
-                <h5 class="mb-4 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-200">
+                <h5 class="mb-2 block font-sans text-sm md:text-xl font-semibold leading-snug tracking-normal text-slate-200">
                   Listening: {{ result.listening }}
                 </h5>
-                <h5 class="mb-4 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-200">
+                <h5 class="mb-2 block font-sans text-sm md:text-xl font-semibold leading-snug tracking-normal text-slate-200">
                   Reading: {{ result.reading }}
                 </h5>
-                <h5 class="mb-4 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-200">
+                <h5 class="mb-2 block font-sans text-sm md:text-xl font-semibold leading-snug tracking-normal text-slate-200">
                   Writing: {{ result.writing }}
                 </h5>
-                <h5 class="mb-4 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-200">
+                <h5 class="mb-4 block font-sans text-sm md:text-xl font-semibold leading-snug tracking-normal text-slate-200">
                   Speaking: {{ result.speaking }}
                 </h5>
-                <h2 class="mb-6 block font-sans text-3xl font-medium leading-[1.5] tracking-normal text-white">
+                <h2 class="mb-2 block font-sans text-2xl font-medium leading-[1.5] tracking-normal text-white">
                   Overall: {{ result.overall }}
                 </h2>
               </div>
