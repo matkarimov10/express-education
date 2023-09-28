@@ -12,7 +12,8 @@ import GlobeIcon from "../assets/icons/GlobeIcon.vue";
 import {onClickOutside, useDark} from "@vueuse/core";
 import {useDropDownStore} from "../store/dropdown.store.js";
 import {useModalStore} from "@/store/modal.store.js";
-import LoginModal from "@/components/Modals/LoginSignUpModal.vue";
+import LoginSignUpModal from "@/components/Modals/LoginSignUpModal.vue";
+import {useRoute} from "vue-router";
 
 onMounted(() => {
   initFlowbite();
@@ -49,7 +50,11 @@ const isDarkMode = useDark()
 const toggleSvgPaths = () => {
   isOpenMenu.value = !isOpenMenu.value;
 };
+const route = useRoute()
 
+const isActive = (path)=>{
+  return route.path === path
+}
 const navLinks = ref([
   {name: 'Home', path: '/', i18nKey: 'navLinks.home'},
   {name: 'Courses', path: '/courses', i18nKey: 'navLinks.courses'},
@@ -87,7 +92,7 @@ const navLinks = ref([
             <div class="text-base leading-none">O'zbek</div>
           </div>
         </div>
-        <!--Dark Mode&Light Mode button-->
+        <!--Dark&Light Mode button-->
         <button type="button" @click="isDarkMode= !isDarkMode"
                 class="inline-flex items-center justify-center w-10 h-10 mx-4 rounded-full text-slate-600 dark:text-slate-400 bg-slate-200 dark:hover:bg-slate-600 dark:bg-slate-700 hover:bg-slate-300 focus:outline-none"
         >
@@ -97,15 +102,15 @@ const navLinks = ref([
         <!--Login and Register Button-->
         <button class="hidden md:block">
           <router-link to="/registration"
-                       class="transition duration-300 inline-flex items-center justify-center px-1.5 py-2 text-sm font-medium text-white bg-indigo-700 rounded-md hover:bg-indigo-800">
+                       class="transition duration-300 inline-flex items-center justify-center px-1.5 py-2 text-sm font-medium text-white bg-indigo-700 rounded-2xl hover:bg-indigo-800">
             Register to course
           </router-link>
         </button>
-        <button @click="useModalStore().openLoginModal()"
-                class="mx-2 transition duration-300 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-indigo-800">
+        <button @click="useModalStore().openLoginSignUpModal()"
+                class="mx-2 transition duration-300 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-2xl hover:bg-indigo-800">
               Login/SignUp
         </button>
-        <LoginModal/>
+        <LoginSignUpModal/>
         <!--Button Burger-->
         <button @click="toggleSvgPaths" data-collapse-toggle="navbar-language" type="button"
                 class="inline-flex items-center ml-2.5 p-2.5 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:text-slate-400 dark:hover:bg-slate-700 dark:focus:ring-slate-600"
@@ -135,7 +140,8 @@ const navLinks = ref([
           <li v-for="navLink in navLinks">
             <router-link
                 :to="navLink.path"
-                class="block py-2 pl-3 my-1 border rounded pr- md:border-0 text-slate-900 hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-slate-600">
+                :class="{ 'bg-indigo-700 text-white md:px-1.5': isActive(navLink.path) }"
+                class="block p-1.5 pl-3 my-1 border rounded md:border-0 text-slate-900 hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-slate-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-slate-600">
               {{ $t(navLink.i18nKey) }}
             </router-link>
           </li>

@@ -4,7 +4,8 @@ import './style.css';
 import 'flowbite';
 import router from './router';
 import App from './App.vue';
-import DashboardLayout from './layouts/DashboardLayout.vue';
+import DashboardLayout from "@/layouts/DashboardLayout.vue"
+import AdminLayout from "@/layouts/AdminLayout.vue";
 import Toast from 'vue-toastification'
 import 'vue-toastification/dist/index.css'
 import i18n from "./i18n.js";
@@ -18,6 +19,7 @@ app.use(i18n)
 app.use(Toast)
 app.use(Vue3Marquee)
 app.component('dashboard-layout', DashboardLayout);
+app.component('admin-layout', AdminLayout)
 app.mount('#app');
 
 export default app;

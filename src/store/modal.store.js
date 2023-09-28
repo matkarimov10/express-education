@@ -1,21 +1,21 @@
 import { defineStore } from "pinia"
 export const useModalStore = defineStore('modal', {
     state: () => ({
-        isLoginModalOpen: false,
-        isSignUpModalOpen:false
+        isLoginSignUpModalOpen: false,
+        isForgotPasswordModalOpen:false
     }),
     actions: {
-        openLoginModal() {
-            this.isLoginModalOpen = true
+        openLoginSignUpModal() {
+            this.isLoginSignUpModalOpen = true
         },
-        closeLoginModal() {
-            this.isLoginModalOpen = false
+        closeLoginSignUpModal() {
+            this.isLoginSignUpModalOpen = false
         },
-        openSignUpModal(){
-            this.isSignUpModalOpen = true
+        openForgotPasswordModal(){
+            this.isForgotPasswordModalOpen = true
         },
-        closeSignUpModal(){
-           this.isSignUpModalOpen = false
+        closeForgotPasswordModal(){
+           this.isForgotPasswordModalOpen = false
         }
     }
 })
