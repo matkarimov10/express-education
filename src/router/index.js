@@ -1,6 +1,8 @@
 import {createRouter, createWebHistory} from 'vue-router'
+import {useToast} from "vue-toastification";
 import {supabase} from "@/client/supabase.js"
 
+const notify = useToast()
 let localUser
 
 const routes = [
@@ -90,11 +92,13 @@ async function getUser(next) {
     localUser = await supabase.auth.getSession()
     console.log(localUser)
     if (localUser.data.session == null) {
+        notify.warning('Itlimos, avval akkauntingizga kiring!')
         next("/")
     } else {
         next()
     }
 }
+
 //auth requirements
 router.beforeEach((to, from, next) => {
     if (to.meta.requiresAuth) {

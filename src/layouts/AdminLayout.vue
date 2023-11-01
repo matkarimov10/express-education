@@ -1,13 +1,12 @@
 <script setup>
-
 import BottomBar from "@/components/AdminComponents/BottomBar.vue";
+import NavbarTop from "@/components/AdminComponents/NavbarTop.vue";
 </script>
 
 <template>
-  <div class="min-h-screen w-full">
+  <NavbarTop/>
     <router-view/>
     <BottomBar/>
-  </div>
 </template>
 
 <style scoped>

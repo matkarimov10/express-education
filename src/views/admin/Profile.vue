@@ -3,9 +3,9 @@ import {ref} from "vue";
 import {useToast} from "vue-toastification";
 import {supabase} from "@/client/supabase.js";
 import router from "@/router/index.js";
-import NavbarTop from "@/components/AdminComponents/NavbarTop.vue";
 import LoadingSpinner from "@/assets/icons/LoadingSpinner.vue";
-
+import InstagramIcon from "@/assets/icons/InstagramIcon.vue";
+import TelegramIcon from "@/assets/icons/TelegramIcon.vue";
 const isLoading = ref(false)
 const notify = useToast()
 const logout = async ()=> {
@@ -25,39 +25,44 @@ const logout = async ()=> {
 </script>
 
 <template>
-  <NavbarTop/>
-<!--Profile content-->
   <div class="dark:bg-slate-800 py-5 min-h-screen">
-    <div
-        class="max-w-6xl mx-4 rounded-lg md:mx-auto bg-white dark:bg-slate-900 shadow-xl text-gray-900">
-      <div class="h-32 overflow-hidden rounded-t-lg">
-        <img class="object-cover w-full h-full"
-             src='https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ'
-             alt='Mountain'>
-      </div>
-      <div class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
-        <img class="object-cover object-center bg-white h-32" src='https://cdn-icons-png.flaticon.com/512/6927/6927593.png' alt='admin'>
-      </div>
-      <div class="text-center mt-2">
-        <h2 class="font-semibold text-indigo-800 dark:text-white">Express admin</h2>
-        <p class="text-slate-500 dark:text-slate-300">User</p>
-      </div>
-      <div>
-        <!--show User Details-->
-      </div>
-      <div class="p-4 border-t dark:border-t-slate-500 mx-8 mt-2">
-        <div v-if="isLoading"
-             class="w-1/2 select-none mx-auto bg-red-500 py-2 font-light text-white rounded-full flex items-center justify-center">
-          <LoadingSpinner/>
-          <span>Loading</span>
+      <div class="max-w-3xl md:mx-auto mx-4 border border-slate-300 rounded-lg dark:border dark:border-slate-600">
+        <div class="overflow-hidden rounded-t-lg">
+          <img src="https://i.postimg.cc/Qdhgyp8g/second.jpg" alt="" class="object-cover object-top w-full h-48">
         </div>
-        <button v-else @click="logout"
-                class="w-1/2 block mx-auto rounded-full bg-red-500 hover:bg-red-600 hover:shadow-lg font-semibold text-white px-6 py-2">Sign
-          out
-        </button>
+        <div class="relative w-32 h-32 mx-auto -mt-16 overflow-hidden rounded-full">
+          <img src="https://t3.ftcdn.net/jpg/00/65/75/68/360_F_65756860_GUZwzOKNMUU3HldFoIA44qss7ZIrCG8I.jpg" alt="admin image"
+               class="object-cover object-top w-full h-32 ">
+        </div>
+        <div class="p-4">
+          <div class="text-center">
+            <h2 class="text-xl font-bold dark:text-slate-400">Express</h2>
+            <p class="mt-1 text-base text-slate-500 dark:text-slate-400">Admin</p>
+          </div>
+          <div class="flex flex-wrap items-center space-x-4 justify-center mt-4">
+            <a href=""
+               class="p-2 text-red-800 rounded-full shadow-md dark:hover:text-red-400 hover:text-blue-600 dark:text-slate-300">
+              <InstagramIcon class="w-5 h-5"/>
+            </a>
+            <a href=""
+               class="p-2 text-blue-500 rounded-full shadow-md dark:hover:text-blue-400 hover:text-blue-600 dark:text-slate-400">
+              <TelegramIcon class="w-5 h-5"/>
+            </a>
+          </div>
+          <div class="flex justify-center px-2 mt-4">
+            <div v-if="isLoading"
+                 class="flex justify-center items-center w-full px-4 py-2 text-center text-slate-100 bg-pink-800 rounded-full hover:bg-pink-700">
+              <LoadingSpinner/>
+              <span>Loading</span>
+            </div>
+            <button v-else @click="logout"
+                    class="w-full px-4 py-2 text-center text-slate-100 bg-pink-800 rounded-full hover:bg-pink-700">Sign
+              out
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

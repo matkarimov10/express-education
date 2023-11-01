@@ -4,16 +4,15 @@ import {initFlowbite} from 'flowbite'
 import {ref} from "vue";
 import i18n from "../i18n.js";
 import {useI18n} from "vue-i18n";
-import LightModeIcon from "../assets/icons/LightModeIcon.vue";
-import DarkModeIcon from "../assets/icons/DarkModeIcon.vue";
 import USAFlagIcon from "../assets/icons/USAFlagIcon.vue";
 import UZBFlagIcon from "../assets/icons/UZBFlagIcon.vue";
 import GlobeIcon from "../assets/icons/GlobeIcon.vue";
-import {onClickOutside, useDark} from "@vueuse/core";
+import {onClickOutside} from "@vueuse/core";
 import {useDropDownStore} from "../store/dropdown.store.js";
 import {useModalStore} from "@/store/modal.store.js";
 import LoginSignUpModal from "@/components/Modals/LoginSignUpModal.vue";
 import {useRoute} from "vue-router";
+import DarkModeButton from "@/components/DarkModeButton.vue";
 
 onMounted(() => {
   initFlowbite();
@@ -24,7 +23,6 @@ const languageDropDown = ref(null)
 const currentLang = ref(localStorage.getItem('lang') || 'uz');
 
 onMounted(() => {
-  // Register the onClickOutside function here
   onClickOutside(languageDropDown, () => {
     useDropDownStore().closeLanguageDropDown();
   });
@@ -44,9 +42,7 @@ const changeLang = (lang) => {
   document.getElementsByTagName('title')[0].innerHTML = t('title')
   useDropDownStore().closeLanguageDropDown()
 }
-
 const isOpenMenu = ref(true)
-const isDarkMode = useDark()
 const toggleSvgPaths = () => {
   isOpenMenu.value = !isOpenMenu.value;
 };
@@ -93,12 +89,7 @@ const navLinks = ref([
           </div>
         </div>
         <!--Dark&Light Mode button-->
-        <button type="button" @click="isDarkMode= !isDarkMode"
-                class="inline-flex items-center justify-center w-10 h-10 mx-4 rounded-full text-slate-600 dark:text-slate-400 bg-slate-200 dark:hover:bg-slate-600 dark:bg-slate-700 hover:bg-slate-300 focus:outline-none"
-        >
-          <DarkModeIcon v-if="!isDarkMode" class="text-indigo-800"/>
-          <LightModeIcon v-else class="text-yellow-300"/>
-        </button>
+        <DarkModeButton/>
         <!--Login and Register Button-->
         <button class="hidden md:block">
           <router-link to="/registration"
